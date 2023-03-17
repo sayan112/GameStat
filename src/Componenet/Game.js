@@ -18,7 +18,7 @@ const Game = ({ name, released, rating, backgroundimage, id}) => {
       alignItems="center"
       justifyContent="space-evenly"
      
-      minHeight="60vh"
+      minHeight="45vh"
       boxShadow="0px 5px 30px rgba(0,0,10,0.2)"
       borderRadius="0.8rem"
       sx={{ cursor: "pointer" }}
