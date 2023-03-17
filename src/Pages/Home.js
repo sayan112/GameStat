@@ -11,7 +11,7 @@ import {  useLocation } from "react-router";
 const Home = () => {
    const location=useLocation();
      const pathid =location.pathname.split("/")[2];
-      console.log(pathid);
+
   //Fetch games
   const dispatch = useDispatch();
 

@@ -3,12 +3,13 @@ import React from "react";
 import { useDispatch } from "react-redux";
  import { loadDetails } from "../Actions/detailAction";
  import { Link } from "react-router-dom";
-const Game = ({ name, released, rating, backgroundimage, id, key }) => {
+const Game = ({ name, released, rating, backgroundimage, id}) => {
 
   const dispatch=useDispatch();
    const loadDetailAction=()=>{
+       document.body.style.overflow = "hidden";
     dispatch(loadDetails(id));
-      //  console.log(id);
+  
    }
   return (
     <Box
@@ -16,10 +17,10 @@ const Game = ({ name, released, rating, backgroundimage, id, key }) => {
       flexDirection="column"
       alignItems="center"
       justifyContent="space-evenly"
-      padding="5px"
-      minHeight="59vh"
+     
+      minHeight="60vh"
       boxShadow="0px 5px 30px rgba(0,0,10,0.2)"
-      borderRadius="1rem"
+      borderRadius="0.8rem"
       sx={{ cursor: "pointer" }}
       onClick={loadDetailAction}
     >
@@ -30,11 +31,12 @@ const Game = ({ name, released, rating, backgroundimage, id, key }) => {
         <Box>{released}</Box>
         <Box>{rating}</Box>
       </Box>
-      <Box width="100%" height="80%">
+      <Box width="100%" height="100%">
         <Link to={`/game/${id}`} style={{ textDecoration: "none" }}>
           <img
             style={{
-               display:"block",
+              display:"block",
+               overflow:"hidden",
               width: "100%",
               height: "100%",
               objectFit: "cover",
